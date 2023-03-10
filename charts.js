@@ -105,7 +105,7 @@ function buildCharts(sample) {
     // Deliverable 1: 10. Use Plotly to plot the data with the layout. 
     Plotly.newPlot("bar", barData, barLayout);
     // Deliverable 2: 1. Create the trace for the bubble chart.
-      var traceb = [
+      var tracebub = [
       {
         x:otu_ids,
         y:sample_values,
@@ -120,7 +120,7 @@ function buildCharts(sample) {
     ];
 
     // Deliverable 2: 2. Create the layout for the bubble chart.
-    var layoutb = {
+    var layoutbub = {
       title: "Bacteria Cultures Per Sample",
       xaxis: {title: "OTU ID"},
       hovermode: "closest",
@@ -128,7 +128,7 @@ function buildCharts(sample) {
     // Deliverable 2: 3. Use Plotly to plot the data with the layout.
     Plotly.newPlot("bubble",traceb,layoutb);
     // Deliverable 3: 4. Create the trace for the gauge chart.
-    var traceg = [
+    var tracegauge = [
       {
         domain: {x:[0,1],  y:[0,1]},
         value: wash_freq,
@@ -149,7 +149,7 @@ function buildCharts(sample) {
       }
     ]
     // Deliverable 3: 5. Create the layout for the gauge chart.
-    var layoutg = {
+    var layoutgauge = {
       width: 460,
       height: 350,
       margin: {t:0,b:0}
